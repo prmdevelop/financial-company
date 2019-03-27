@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "FIN_COMPANYMASTER")
+@Table(name = "FIN_MASTER_COMP")
 public class Company{
 
 	private String id;
@@ -42,7 +42,7 @@ public class Company{
 		this.id = id;
 	}
 	
-	@Column(name = "COMPANYNAME")
+	@Column(name = "COMPANY_NAME")
 	public String getCompanyName() {
 		return companyName;
 	}
@@ -50,7 +50,7 @@ public class Company{
 		this.companyName = companyName;
 	}
 	
-	@Column(name = "SICCODE")
+	@Column(name = "SIC_CODE")
 	public int getSicCode() {
 		return sicCode;
 	}
@@ -58,7 +58,7 @@ public class Company{
 		this.sicCode = sicCode;
 	}
 	
-	@Column(name = "NAICSCODE")
+	@Column(name = "NAICS_CODE")
 	public int getNaicsCode() {
 		return naicsCode;
 	}
@@ -66,7 +66,7 @@ public class Company{
 		this.naicsCode = naicsCode;
 	}
 	
-	@Column(name = "TICKER")
+	@Column(name = "TICKER_NAME")
 	public String getTicker() {
 		return ticker;
 	}
@@ -82,7 +82,7 @@ public class Company{
 		this.osuc = osuc;
 	}
 	
-	@Column(name = "PARENTID")
+	@Column(name = "PARENT_ID")
 	public String getParentId() {
 		return parentId;
 	}
@@ -90,7 +90,7 @@ public class Company{
 		this.parentId = parentId;
 	}
 	
-	@Column(name = "DOMICILECONTRY")
+	@Column(name = "DOMICILECOUNTRY_NAME")
 	public String getDomicileCountry() {
 		return domicileCountry;
 	}
@@ -98,7 +98,7 @@ public class Company{
 		this.domicileCountry = domicileCountry;
 	}
 	
-	@Column(name = "EXCHANGE")
+	@Column(name = "EXCHANGE_NAME")
 	public String getExchange() {
 		return exchange;
 	}
@@ -106,7 +106,7 @@ public class Company{
 		this.exchange = exchange;
 	}
 	
-	@Column(name = "ASSIGNEMPID")
+	@Column(name = "ASSIGNEMP_ID")
 	public String getAssignedEmpId() {
 		return assignedEmpId;
 	}
@@ -114,7 +114,7 @@ public class Company{
 		this.assignedEmpId = assignedEmpId;
 	}
 	
-	@Column(name = "EXTERNALDBID")
+	@Column(name = "EXTERNALDB_ID")
 	public String getExternalID() {
 		return externalID;
 	}
@@ -122,7 +122,7 @@ public class Company{
 		this.externalID = externalID;
 	}
 	
-	@Column(name = "DATEOFINCORPORATION")
+	@Column(name = "DATE_OF_INCORPORATION")
 	public Date getIncorporationDate() {
 		return incorporationDate;
 	}
@@ -130,7 +130,7 @@ public class Company{
 		this.incorporationDate = incorporationDate;
 	}
 	
-	@Column(name = "CREATIONDATE")
+	@Column(name = "CREATION_DATE")
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -138,7 +138,7 @@ public class Company{
 		this.createdDate = createdDate;
 	}
 	
-	@Column(name = "LASTMODIFIEDDATE")
+	@Column(name = "LASTMODIFIED_DATE")
 	public Date getLastModifiedDate() {
 		return lastModifiedDate;
 	}
@@ -147,7 +147,7 @@ public class Company{
 	}
 	
 	@ManyToOne
-	@JoinColumn(name = "REGIONID") 
+	@JoinColumn(name = "REGION_ID") 
 	public CompanyRegion getCompanyRegion() {
 		return companyRegion;
 	}
@@ -156,7 +156,7 @@ public class Company{
 	}
 	
 	@ManyToOne
-	@JoinColumn(name = "BUSINESSUNITID") 
+	@JoinColumn(name = "BUSINESSUNIT_ID") 
 	public BusinessUnit getBusinessUnit() {
 		return businessUnit;
 	}
@@ -165,7 +165,7 @@ public class Company{
 	}
 	
 	@ManyToOne
-	@JoinColumn(name = "CONSTITUTIONID") 
+	@JoinColumn(name = "CONSTITUTION_ID") 
 	public CompanyConstitution getCompanyConstitution() {
 		return companyConstitution;
 	}
@@ -174,7 +174,7 @@ public class Company{
 	}
 	
 	@ManyToOne
-	@JoinColumn(name = "INDUSTRYID")
+	@JoinColumn(name = "INDUSTRY_ID")
 	public Industry getIndustry() {
 		return industry;
 	}

@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "COMPANYCONSTITUTION") 
+@Table(name = "FIN_MASTER_CONSTITUTION") 
 public class CompanyConstitution {
 	
 	private String id;
-	private String constitutionType;
+	private String constitutionName;
 	private Date createdDate;
 	private Date lastModifiedDate;
 	
@@ -26,15 +26,15 @@ public class CompanyConstitution {
 		this.id = id;
 	}
 	
-	@Column(name = "CONSTITUTIONTYPE")
-	public String getConstitutionType() {
-		return constitutionType;
+	@Column(name = "CONSTITUTION_NAME")
+	public String getConstitutionName() {
+		return constitutionName;
 	}
-	public void setConstitutionType(String constitutionType) {
-		this.constitutionType = constitutionType;
+	public void setConstitutionName(String constitutionName) {
+		this.constitutionName = constitutionName;
 	}
 	
-	@Column(name = "CREATEDDATE")
+	@Column(name = "CREATED_DATE")
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -42,7 +42,7 @@ public class CompanyConstitution {
 		this.createdDate = createdDate;
 	}
 	
-	@Column(name = "LASTMODIFIEDDATE")
+	@Column(name = "LASTMODIFIED_DATE")
 	public Date getLastModifiedDate() {
 		return lastModifiedDate;
 	}

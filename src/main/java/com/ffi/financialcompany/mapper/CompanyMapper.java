@@ -12,7 +12,7 @@ public interface CompanyMapper {
 	
 	@Mapping(target = "region" , source = "company.companyRegion.region")
 	@Mapping(target = "businessUnit" , source = "company.businessUnit.businessUnitName")
-	@Mapping(target = "constitution" , source = "company.companyConstitution.constitutionType")
+	@Mapping(target = "constitution" , source = "company.companyConstitution.constitutionName")
 	@Mapping(target = "industry" , source = "company.industry.industryName")
 	CompanyVO fromCompany(Company company);
 	

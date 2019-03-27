@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "COMPANYREGION")
+@Table(name = "FIN_MASTER_REGION")
 public class CompanyRegion {
 	
 	private String id;
@@ -27,7 +27,7 @@ public class CompanyRegion {
 		this.id = id;
 	}
 	
-	@Column(name = "REGION")
+	@Column(name = "REGION_NAME")
 	public String getRegion() {
 		return region;
 	}
@@ -35,7 +35,7 @@ public class CompanyRegion {
 		this.region = region;
 	}
 	
-	@Column(name = "CREATEDDATE")
+	@Column(name = "CREATED_DATE")
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -43,7 +43,7 @@ public class CompanyRegion {
 		this.createdDate = createdDate;
 	}
 	
-	@Column(name = "LASTMODIFIEDDATE")
+	@Column(name = "LASTMODIFIED_DATE")
 	public Date getLastModifiedDate() {
 		return lastModifiedDate;
 	}
