@@ -17,6 +17,10 @@ import com.ffi.financialcompany.handler.AppProperities;
 import com.ffi.financialcompany.service.CompanyService;
 import com.ffi.financialcompany.vo.CompanyVO;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
+@Api(value = "FinancialCompany End Point")
 @RestController
 @RequestMapping("/rest/Financial/")
 public class FinancialCompanyEndpoint {
@@ -29,6 +33,7 @@ public class FinancialCompanyEndpoint {
 	@Autowired
 	AppProperities appProperities;
 	
+	@ApiOperation(value = "Get Financial Company")
 	@GetMapping(value = "/getCompany/{filter}", produces = "application/json")
 	@ResponseBody
 	public ResponseJson<ResponseObject> getFinancialCompany(@PathVariable final String filter) {
