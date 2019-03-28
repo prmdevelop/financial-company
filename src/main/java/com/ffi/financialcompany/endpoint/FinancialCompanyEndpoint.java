@@ -36,28 +36,28 @@ public class FinancialCompanyEndpoint {
 	@ApiOperation(value = "Get Financial Company")
 	@GetMapping(value = "/getCompany/{filter}", produces = "application/json")
 	@ResponseBody
-	public ResponseJson<ResponseObject> getFinancialCompany(@PathVariable final String filter) {
+	public FinancialCompanyResponseJson<FinancialCompanyResponseObject> getFinancialCompany(@PathVariable final String filter) {
 		logger.info("Start of FinancialCompanyEndpoint.getFinancialCompany()");
-		ResponseJson<ResponseObject> pocResponseJson = new ResponseJson<>();
+		FinancialCompanyResponseJson<FinancialCompanyResponseObject> responseJson = new FinancialCompanyResponseJson<>();
 		try {
-			ResponseObject response = new ResponseObject();
-			Map<String, Object> responseObject = new HashMap<>();
+			FinancialCompanyResponseObject responseObject = new FinancialCompanyResponseObject();
+			Map<String, Object> data = new HashMap<>();
 			List<CompanyVO> companyList = companyService.getFinancialCompany(filter);
-			responseObject.put("company",companyList);
-			response.setResponseObject(responseObject);
-			pocResponseJson.setStatusMessage(appProperities.getPropertyValue("success.retrieved.msg"));
-			pocResponseJson.setStatusMessage(companyList.isEmpty()?appProperities.getPropertyValue("records.not.found")
+			data.put("company",companyList);
+			responseObject.setResponseObject(data);
+			responseJson.setStatusMessage(appProperities.getPropertyValue("success.retrieved.msg"));
+			responseJson.setStatusMessage(companyList.isEmpty()?appProperities.getPropertyValue("records.not.found")
 																   :appProperities.getPropertyValue("success.retrieved.msg"));
-			pocResponseJson.setStatusCode(companyList.isEmpty()?appProperities.getPropertyValue("error.code")
+			responseJson.setStatusCode(companyList.isEmpty()?appProperities.getPropertyValue("error.code")
 																:appProperities.getPropertyValue("success.code"));
-			pocResponseJson.setData(response);
+			responseJson.setData(responseObject);
 		} catch (Exception e) {
 			logger.error("Exception in FinancialCompanyEndpoint.getFinancialCompany()");
-			pocResponseJson.setErrorMessage(appProperities.getPropertyValue("error.retrieved.msg"));
-			pocResponseJson.setErrorCode(appProperities.getPropertyValue("error.code"));
+			responseJson.setErrorMessage(appProperities.getPropertyValue("error.retrieved.msg"));
+			responseJson.setErrorCode(appProperities.getPropertyValue("error.code"));
 		}
 		logger.info("End of FinancialCompanyEndpoint.getFinancialCompany()");
-		return pocResponseJson;
+		return responseJson;
 	}
 
 }

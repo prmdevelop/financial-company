@@ -1,6 +1,6 @@
 package com.ffi.financialcompany.endpoint;
 
-public class RequestJson {
+public class FinancialCompanyRequestJson {
 
 	private String data;
 
@@ -14,6 +14,7 @@ public class RequestJson {
 
 	@Override
 	public String toString() {
-		return "RequestJson [data=" + data + "]";
+		return "FinancialCompanyRequestJson [data=" + data + "]";
 	}
+	
 }
