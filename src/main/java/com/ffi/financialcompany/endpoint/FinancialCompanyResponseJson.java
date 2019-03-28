@@ -1,6 +1,6 @@
 package com.ffi.financialcompany.endpoint;
 
-public class ResponseJson<T> {
+public class FinancialCompanyResponseJson<T> {
 
 	private String statusCode;
 	private String statusMessage;
@@ -8,10 +8,10 @@ public class ResponseJson<T> {
 	private String errorMessage;
 	private T data;
 
-	public ResponseJson() {
+	public FinancialCompanyResponseJson() {
 	}
 
-	public ResponseJson(String statusCode, String statusMessage, String errorCode, String errorMessage, T data) {
+	public FinancialCompanyResponseJson(String statusCode, String statusMessage, String errorCode, String errorMessage, T data) {
 		this.statusCode = statusCode;
 		this.statusMessage = statusMessage;
 		this.errorCode = errorCode;
@@ -61,7 +61,7 @@ public class ResponseJson<T> {
 
 	@Override
 	public String toString() {
-		return "ResponseJson [statusCode=" + statusCode + ", statusMessage=" + statusMessage + ", errorCode="
+		return "FinancialCompanyResponseJson [statusCode=" + statusCode + ", statusMessage=" + statusMessage + ", errorCode="
 				+ errorCode + ", errorMessage=" + errorMessage + ", data=" + data + "]";
 	}
 

@@ -3,7 +3,7 @@ package com.ffi.financialcompany.endpoint;
 import java.io.Serializable;
 import java.util.Map;
 
-public class ResponseObject implements Serializable{
+public class FinancialCompanyResponseObject implements Serializable{
 
 	/**
 	 * 
