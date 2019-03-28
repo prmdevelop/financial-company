@@ -44,7 +44,7 @@ public class FinancialCompanyEndpoint {
 			Map<String, Object> data = new HashMap<>();
 			List<CompanyVO> companyList = companyService.getFinancialCompany(filter);
 			data.put("company",companyList);
-			responseObject.setResponseObject(data);
+			responseObject.setFinancialCompanyResponse(data);
 			responseJson.setStatusMessage(appProperities.getPropertyValue("success.retrieved.msg"));
 			responseJson.setStatusMessage(companyList.isEmpty()?appProperities.getPropertyValue("records.not.found")
 																   :appProperities.getPropertyValue("success.retrieved.msg"));

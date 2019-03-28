@@ -21,6 +21,7 @@ public class CompanyVO {
 	public Date incorporationDate;
 	public Date createdDate;
 	public Date lastModifiedDate;
+	public String accessMode = "none";
 	
 	@Override
 	public String toString() {
@@ -29,6 +30,6 @@ public class CompanyVO {
 				+ constitution + ", industry=" + industry + ", osuc=" + osuc + ", parentId=" + parentId
 				+ ", domicileCountry=" + domicileCountry + ", exchange=" + exchange + ", assignedEmpId=" + assignedEmpId
 				+ ", externalID=" + externalID + ", incorporationDate=" + incorporationDate + ", createdDate="
-				+ createdDate + ", lastModifiedDate=" + lastModifiedDate + "]";
+				+ createdDate + ", lastModifiedDate=" + lastModifiedDate + ",accessMode=" +accessMode +"]";
 	}
 }

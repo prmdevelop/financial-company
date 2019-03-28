@@ -10,13 +10,13 @@ public class FinancialCompanyResponseObject implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private Map<String, Object> responseObject;
+	private Map<String, Object> financialCompanyResponse;
 
-	public Map<String, Object> getResponseObject() {
-		return responseObject;
+	public Map<String, Object> getFinancialCompanyResponse() {
+		return financialCompanyResponse;
 	}
 
-	public void setResponseObject(Map<String, Object> responseObject) {
-		this.responseObject = responseObject;
+	public void setFinancialCompanyResponse(Map<String, Object> financialCompanyResponse) {
+		this.financialCompanyResponse = financialCompanyResponse;
 	}
 }
