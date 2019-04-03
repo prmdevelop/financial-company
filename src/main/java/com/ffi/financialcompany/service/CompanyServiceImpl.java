@@ -37,7 +37,7 @@ public class CompanyServiceImpl implements CompanyService {
 			List<Company> companyList = companyDao.getFinancialCompany(filter);
 			companies = companyList.stream().map(c -> mapper.fromCompany(c)).collect(Collectors.toList());
 		} catch (ApplicationBusinessException e) {
-			logger.error(appProperities.getPropertyValue("error.retrieved.msg"), e);
+			logger.error("Error in CompanyServiceImpl.getFinancialCompany()"+ e.getCause());
 			throw new ApplicationBusinessException(appProperities.getPropertyValue("error.retrieved.msg"));
 		}
 		logger.info("End of CompanyServiceImpl.getFinancialCompany()");
