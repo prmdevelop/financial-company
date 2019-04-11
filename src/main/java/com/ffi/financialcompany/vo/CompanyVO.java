@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class CompanyVO {
 	
+	public String id;
 	public String companyName;
 	public int sicCode;
 	public int naicsCode;
@@ -25,11 +26,12 @@ public class CompanyVO {
 	
 	@Override
 	public String toString() {
-		return "CompanyVO [companyName=" + companyName + ", sicCode=" + sicCode + ", naicsCode=" + naicsCode
-				+ ", ticker=" + ticker + ", region=" + region + ", businessUnit=" + businessUnit + ", constitution="
-				+ constitution + ", industry=" + industry + ", osuc=" + osuc + ", parentId=" + parentId
-				+ ", domicileCountry=" + domicileCountry + ", exchange=" + exchange + ", assignedEmpId=" + assignedEmpId
-				+ ", externalID=" + externalID + ", incorporationDate=" + incorporationDate + ", createdDate="
-				+ createdDate + ", lastModifiedDate=" + lastModifiedDate + ",accessMode=" +accessMode +"]";
+		return "CompanyVO [id=" + id + ", companyName=" + companyName + ", sicCode=" + sicCode + ", naicsCode="
+				+ naicsCode + ", ticker=" + ticker + ", region=" + region + ", businessUnit=" + businessUnit
+				+ ", constitution=" + constitution + ", industry=" + industry + ", osuc=" + osuc + ", parentId="
+				+ parentId + ", domicileCountry=" + domicileCountry + ", exchange=" + exchange + ", assignedEmpId="
+				+ assignedEmpId + ", externalID=" + externalID + ", incorporationDate=" + incorporationDate
+				+ ", createdDate=" + createdDate + ", lastModifiedDate=" + lastModifiedDate + ", accessMode="
+				+ accessMode + "]";
 	}
 }
